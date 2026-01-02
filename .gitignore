@@ -1,0 +1,4 @@
+# Example
+*.log
+.env
+.zsh_history
