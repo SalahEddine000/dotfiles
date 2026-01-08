@@ -91,8 +91,13 @@ alias mkdir='mkdir -p'
 alias v='nvim'
 alias lzd='lazydocker'
 alias sail='./vendor/bin/sail'
+alias storm='phpstorm . > /dev/null 2>&1 & disown'
+alias tm="tmuxifier"
 
 
+export EDITOR=nvim
+export PHPSTORM_JDK=/usr/lib/jvm/default
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export PATH="$HOME/Sdk/flutter/bin:$PATH"
 export PATH="$PATH:$ANDROID_HOME/emulator"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
@@ -146,7 +151,7 @@ emu() {
 alias vd="NVIM_APPNAME=LazyVim nvim"
 
 function nvims() {
-  items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim")
+  items=("default" "LazyVim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
