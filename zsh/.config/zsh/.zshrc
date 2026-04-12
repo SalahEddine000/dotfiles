@@ -170,3 +170,6 @@ fi
 
 # bun completions
 [ -s "/home/salah/.bun/_bun" ] && source "/home/salah/.bun/_bun"
+
+# opencode
+export PATH=/home/salah/.opencode/bin:$PATH
