@@ -9,3 +9,4 @@ map("n", "<leader>tH", "<cmd>FlutterRestart<cr>", { desc = "Flutter Hot Restart"
 map("n", "<leader>tc", "<cmd>FlutterCommands<cr>", { desc = "Flutter Commands" })
 map("n", "<leader>td", "<cmd>FlutterDevices<cr>", { desc = "Flutter Devices" })
 map("n", "<leader>te", "<cmd>FlutterEmulators<cr>", { desc = "Flutter Emulators" })
+map("n", "<leader>tt", "<cmd>FlutterLogToggle<cr>", { desc = "Toggle Log Window" })

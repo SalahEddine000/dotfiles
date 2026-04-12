@@ -94,7 +94,8 @@ alias sail='./vendor/bin/sail'
 alias storm='phpstorm . > /dev/null 2>&1 & disown'
 alias tm="tmuxifier"
 
-
+export BUN_INSTALL="$HOME/.bun" 
+export PATH="$BUN_INSTALL/bin:$PATH" 
 export EDITOR=nvim
 export PHPSTORM_JDK=/usr/lib/jvm/default
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
@@ -166,3 +167,6 @@ function nvims() {
 if [[ -r "$HOME/.zshrc" && "$HOME/.zshrc" != "${(%):-%N}" ]]; then
   source "$HOME/.zshrc"
 fi
+
+# bun completions
+[ -s "/home/salah/.bun/_bun" ] && source "/home/salah/.bun/_bun"
