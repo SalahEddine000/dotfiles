@@ -151,6 +151,9 @@ emu() {
 
 alias vd="NVIM_APPNAME=LazyVim nvim"
 
+
+alias homeserver="ssh -t homeserver 'export TERM=xterm-256color; exec bash'"
+
 function nvims() {
   items=("default" "LazyVim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
